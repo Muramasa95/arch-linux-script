@@ -28,7 +28,6 @@ cd $HOME
 sudo pacman -S --noconfirm vnstat 
 sudo systemctl enable vnstat.service
 sudo systemctl start vnstat.service
-vnstat --add -i wlp0s20f0u2
 echo
 
 echo "***** Installing and configuring firewall with ufw *****"
@@ -141,32 +140,23 @@ while true; do
 done
 echo
 
-echo "***** Installing oh-my-zsh from git *****"
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
-git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-autocomplete
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-cd $HOME
-echo
-
 echo "***** The script will install NvChad *****"
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 echo
 
-echo "***** The script will copy the config files *****"
-cd $SCRIPTDIR
-mv .zshrc $HOME 
-mv .zsh_history $HOME
-mv mpv $HOME/.config/
-mv MangoHud $HOME/.config/
-mv jellyfin-mpv-shim $HOME/.config/
-mv kitty $HOME/.config/
-mv retroarch $HOME/.config/
-mv bullet-train.zsh-theme $HOME/.oh-my-zsh/themes/
-sudo mv smb.conf /etc/samba/
-cd $HOME
-echo
+# echo "***** The script will copy the config files *****"
+# cd $SCRIPTDIR
+# mv .zshrc $HOME 
+# mv .zsh_history $HOME
+# mv mpv $HOME/.config/
+# mv MangoHud $HOME/.config/
+# mv jellyfin-mpv-shim $HOME/.config/
+# mv kitty $HOME/.config/
+# mv retroarch $HOME/.config/
+# mv bullet-train.zsh-theme $HOME/.oh-my-zsh/themes/
+# sudo mv smb.conf /etc/samba/
+# cd $HOME
+# echo
 
 echo -ne '
 ______ _____ _   _ _____ _____ _   _  ___________ 
