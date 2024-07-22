@@ -15,7 +15,8 @@ You can use the script by running newarch.sh, like so:
 
 ```
 git clone git@github.com:Muramasa95/arch-linux-script.git
-cd new-installation-script
+cd arch-linux-script
+chmod +x newarch.sh
 sh newarch.sh
 ```
 
