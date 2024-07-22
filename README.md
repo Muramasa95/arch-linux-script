@@ -14,7 +14,7 @@ I made this script to save time installing and configuring the same applications
 You can use the script by running newarch.sh, like so:
 
 ```
-git clone git@github.com:Muramasa95/new-installation-script.git
+git clone git@github.com:Muramasa95/arch-linux-script.git
 cd new-installation-script
 sh newarch.sh
 ```
